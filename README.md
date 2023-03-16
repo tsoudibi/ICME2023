@@ -9,7 +9,8 @@ Trained U-Net based Keras model on Drivable Map dataset.
 modified from https://github.com/YoongiKim/RoadDetector
 
 # 環境建立：
-'''
+需要先有anaconda
+```bash
 conda create --n tf python=3.9 -c conda-forge cudatoolkit=11.6 cudnn=8.8
 
 # 重新登出再登入SSH
@@ -23,4 +24,4 @@ echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/' > $CONDA_PREFI
 
 # 套件安裝
 pip install scikit-learn matplotlib
-'''
+```
