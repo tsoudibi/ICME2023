@@ -1,7 +1,6 @@
 iVS-ODSEG-Dataset
 predict_result/images/
 predict_result/real_world1/
-.conda
 logs
 # Byte-compiled / optimized / DLL files
 __pycache__/
