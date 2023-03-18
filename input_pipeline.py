@@ -35,8 +35,14 @@ def get_generators(batch_size, dataset_path,image_shape,real_world = False):
 
     if len(y_valid_files)>0:
         for file in y_valid_files:
-            id = file.replace('\\', '/').split('/')[-1].split('_')[0]
-            x_file = dataset_path + '/images/' + id + '.jpg'
+            if real_world==False:
+                id = file.replace('\\', '/').split('/')[-1].split('_')[0]
+                # x_file = dataset_path + '/images/100k/train/' + id + '.jpg'
+                x_file = dataset_path + '/images/' + id + '.jpg'
+            else:
+                id = file.replace('\\', '/').split('/')[-1].split('.')[0]
+                # x_file = dataset_path + '/images/100k/train/' + id + '.jpg'
+                x_file = dataset_path + '/images_real_world/' + id + '.jpg'
 
             if not os.path.exists(x_file):
                 print('Not exist ', x_file)
